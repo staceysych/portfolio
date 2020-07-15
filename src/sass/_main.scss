@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: $main-color-dark;
+  color: $text-color;
+}
+
+.container {
+  width: 1020px;
+  margin: 0 auto;
+}

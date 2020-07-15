@@ -63,12 +63,13 @@ module.exports = (env, options) => {
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: 'index.html',
-        // favicon: 'src/assets/favicon/favicon.ico',
+        favicon: 'src/assets/favicon/favicon.ico',
         chunks: ['index'],
       }),
       new CopyPlugin([
         { from: 'src/assets/images', to: 'src/assets/images' },
-        /* { from: 'src/assets/favicon', to: 'pages' },
+        { from: 'src/assets/favicon', to: 'pages' },
+        /* ,
         { from: 'src/assets/svg', to: 'src/assets/svg' },
         { from: 'src/assets/fonts', to: 'src/assets/fonts' } */
       ]),

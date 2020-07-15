@@ -13,9 +13,6 @@ module.exports = (env, options) => {
     watch: !isProduction,
     entry: {
       index: ['./src/index.js', './src/sass/index.scss'],
-      main: ['./src/js/main.js', './src/sass/main.scss'],
-      about: ['./src/sass/about.scss'],
-      promo: ['./src/sass/promo.scss'],
     },
     output: {
       path: path.join(__dirname, '/dist'),
@@ -66,29 +63,14 @@ module.exports = (env, options) => {
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: 'index.html',
-        favicon: 'src/assets/favicon/favicon.ico',
+        // favicon: 'src/assets/favicon/favicon.ico',
         chunks: ['index'],
-      }),
-      new HtmlWebpackPlugin({
-        filename: 'pages/main.html',
-        template: 'src/pages/main.html',
-        chunks: ['main'],
-      }),
-      new HtmlWebpackPlugin({
-        filename: 'pages/about.html',
-        template: 'src/pages/about.html',
-        chunks: ['about'],
-      }),
-      new HtmlWebpackPlugin({
-        filename: 'pages/promo.html',
-        template: 'src/pages/promo.html',
-        chunks: ['promo'],
       }),
       new CopyPlugin([
         { from: 'src/assets/images', to: 'src/assets/images' },
-        { from: 'src/assets/favicon', to: 'pages' },
+        /* { from: 'src/assets/favicon', to: 'pages' },
         { from: 'src/assets/svg', to: 'src/assets/svg' },
-        { from: 'src/assets/fonts', to: 'src/assets/fonts' },
+        { from: 'src/assets/fonts', to: 'src/assets/fonts' } */
       ]),
       new MiniCssExtractPlugin({
         filename: './src/css/[name].css',

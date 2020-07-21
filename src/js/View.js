@@ -5,6 +5,7 @@ import {
   PROMO_INFO,
   PROMO_CONTACTS,
   PROMO_IMG,
+  PROMO_SOCIAL,
 } from './constants';
 
 class View {
@@ -76,6 +77,11 @@ class View {
     container.appendChild(promoAbout);
     container.appendChild(promoImg);
     this.body.appendChild(this.promo);
+    this.renderSocial();
+  }
+
+  renderSocial = () => {
+    document.querySelector('.social-icons').innerHTML = PROMO_SOCIAL;
   }
 }
 

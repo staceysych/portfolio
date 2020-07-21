@@ -1,4 +1,5 @@
 const NAME = 'Sych.';
+const INTO_TEXT = 'Hello! I am Anastasiya Sych. Welcome to my page!';
 const MENU_ITEMS = `<li class="menu__item">Hello</li>
                     <li class="menu__item">Skills</li>
                     <li class="menu__item">Experience</li>
@@ -13,11 +14,12 @@ const PROMO_CONTACTS = `<div class="promo__contact"><span>Phone:</span>
                         </div>
                         <div class="promo__contact"><span>Email:</span><a href="mailto:stacey.sych@gmail.com">stacey.sych@gmail.com</a></div>
                         <div class="promo__contact"><span>ADDRESS:</span> Golubka 12-82, Minsk</div>
-                        <div class="promo__contact promo__contact_social"><span>Social:</span><span class="social-icons"></span></div>`;
+                        <div class="promo__contact promo__contact_social"><span>Social:</span><span class="social-icons"></span></div>
+                        <div class="promo__contact promo__contact_btn"></div>`;
 const PROMO_IMG = '<img src="./src/assets/images/me.jpg">';
 const PROMO_SOCIAL = `
                       <a href="https://www.facebook.com/nesty.trofimova" target="_blank" class="social-icon">
-                      <img src="./src/assets/images/facebook-logo.png">
+                      <img src="./src/assets/images/facebook-app-symbol.png">
                       </a>
                       <a href="https://www.instagram.com/tronastya23/" target="_blank" class="social-icon">
                       <img src="./src/assets/images/instagram.png">
@@ -31,13 +33,16 @@ const PROMO_SOCIAL = `
                       <a href="https://github.com/staceysych" target="_blank" class="social-icon">
                       <img src="./src/assets/images/logo.png">
                       </a>`;
+const CONTACT_BTN_TEXT = 'Contact me';
 
 export {
   NAME,
+  INTO_TEXT,
   MENU_ITEMS,
   PROMO_HEADER,
   PROMO_INFO,
   PROMO_CONTACTS,
   PROMO_IMG,
   PROMO_SOCIAL,
+  CONTACT_BTN_TEXT,
 };

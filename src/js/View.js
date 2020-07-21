@@ -1,11 +1,13 @@
 import {
   NAME,
+  INTO_TEXT,
   MENU_ITEMS,
   PROMO_HEADER,
   PROMO_INFO,
   PROMO_CONTACTS,
   PROMO_IMG,
   PROMO_SOCIAL,
+  CONTACT_BTN_TEXT,
 } from './constants';
 
 class View {
@@ -17,6 +19,7 @@ class View {
     this.body = document.querySelector('body');
     this.renderHeader();
     this.renderMenu();
+    this.renderIntro();
     this.renderPromo();
   }
 
@@ -49,9 +52,21 @@ class View {
     this.menu.appendChild(this.menuItems);
   }
 
+  renderIntro() {
+    const title = document.createElement('div');
+    const introButton = this.renderAppBtn();
+    introButton.innerHTML = 'Contact Me';
+    title.classList.add('app-title');
+    title.innerHTML = INTO_TEXT;
+    introButton.classList.add('app-title__btn');
+    title.appendChild(introButton);
+    this.body.appendChild(title);
+  }
+
   renderPromo() {
     this.promo = document.createElement('div');
     this.promo.classList.add('promo-container');
+    const contactButton = this.renderAppBtn();
     const container = this.renderContainer();
     const promoAbout = document.createElement('div');
     const promoHeader = document.createElement('h2');
@@ -64,24 +79,34 @@ class View {
     promoInfo.classList.add('promo-about__info');
     promoContacts.classList.add('promo-about__contacts');
     promoImg.classList.add('promo-about__image');
+    contactButton.classList.add('promo__button');
     promoHeader.innerHTML = PROMO_HEADER;
     promoInfo.innerHTML = PROMO_INFO;
     promoContacts.innerHTML = PROMO_CONTACTS;
     promoImg.innerHTML = PROMO_IMG;
+    contactButton.innerHTML = CONTACT_BTN_TEXT;
 
     promoAbout.appendChild(promoHeader);
     promoAbout.appendChild(promoInfo);
     promoAbout.appendChild(promoContacts);
-
     this.promo.appendChild(container);
     container.appendChild(promoAbout);
     container.appendChild(promoImg);
     this.body.appendChild(this.promo);
     this.renderSocial();
+
+    document.querySelector('.promo__contact_btn').appendChild(contactButton);
   }
 
   renderSocial = () => {
     document.querySelector('.social-icons').innerHTML = PROMO_SOCIAL;
+  }
+
+  renderAppBtn = () => {
+    const appButton = document.createElement('div');
+    appButton.classList.add('app-button');
+
+    return appButton;
   }
 }
 

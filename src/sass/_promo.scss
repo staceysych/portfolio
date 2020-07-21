@@ -49,6 +49,70 @@
   span {
     opacity: .8;
   }
+  &_btn {
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+.promo__button {
+  position: relative;
+
+  padding: 0 24px;
+
+  font-size: 16px;
+  line-height: 52px;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: $text-color;
+  letter-spacing: .5px;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 50%;
+    height: 48px;
+
+    background: transparent;
+    border: 2px solid $main-color;
+    border-radius: 5px;
+
+    transition: .3s ease-in-out;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+
+    width: 80%;
+    height: 30px;
+
+    background: $background-color;
+    transform: translate(-50%,-50%);
+
+    transition: .3s linear;
+  }
+  &:hover:after {
+    background: $main-color;
+    opacity: 0;
+  }
+  &:hover {
+    color: #ffffff;
+  }
+  &:hover:before {
+    width: 100%;
+
+    background: $main-color;
+    box-shadow: 0 10px 90px -2px rgba(#000000,.2);
+  }
 }
 
 .promo__contact:nth-child(1) a {

@@ -8,9 +8,9 @@ header {
   max-height: 80vh;
   padding: 20px 0 20px;
 
-  color: $text-color-dark;
+  color: $text-color;
 
-  background: $text-color;
+  background: $background-color;
   border-bottom: 1px solid $border-color;
 }
 
@@ -41,7 +41,7 @@ header {
   &:hover {
     color: $text-color;
 
-    background: $main-color-dark;
+    background: $main-color;
     border-radius: 5px;
     cursor: pointer;
   }

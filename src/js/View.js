@@ -8,6 +8,8 @@ import {
   PROMO_IMG,
   PROMO_SOCIAL,
   CONTACT_BTN_TEXT,
+  MOTTO,
+  SKILLS,
 } from './constants';
 
 class View {
@@ -21,6 +23,7 @@ class View {
     this.renderMenu();
     this.renderIntro();
     this.renderPromo();
+    this.renderSkills();
   }
 
   renderContainer = () => {
@@ -107,6 +110,25 @@ class View {
     appButton.classList.add('app-button');
 
     return appButton;
+  }
+
+  renderSkills() {
+    const container = this.renderContainer();
+    const skillsSection = document.createElement('section');
+    const motto = document.createElement('div');
+    const skillsWrapper = document.createElement('div');
+
+    skillsSection.classList.add('skills');
+    motto.classList.add('skills__motto');
+    skillsWrapper.classList.add('skills__wrapper');
+
+    motto.innerHTML = MOTTO;
+    skillsWrapper.innerHTML = SKILLS;
+
+    skillsSection.appendChild(container);
+    container.appendChild(motto);
+    container.appendChild(skillsWrapper);
+    this.body.appendChild(skillsSection);
   }
 }
 

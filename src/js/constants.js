@@ -34,6 +34,20 @@ const PROMO_SOCIAL = `
                       <img src="./src/assets/images/logo.png">
                       </a>`;
 const CONTACT_BTN_TEXT = 'Contact me';
+const MOTTO = 'I am inspired by creating great work with people who are as passionate as I am about building something awesome.';
+const SKILLS = `
+                <div class="skill">
+                  <h3>Frontend Development</h3>
+                  <p>JavaScript, HTML, CSS, SASS, Bootstrap, Git, GitHub, Webpack.</p>
+                </div>
+                <div class="skill">
+                  <h3>UI/UX Design</h3>
+                  <p>Avacode, Figma, Adobe Premiere Pro.</p>
+                </div>
+                <div class="skill">
+                  <h3>Languages proficiency</h3>
+                  <p>English (Advanced, C2+), Chinese (HSK4, HSKK2)</p>
+                </div>`;
 
 export {
   NAME,
@@ -45,4 +59,6 @@ export {
   PROMO_IMG,
   PROMO_SOCIAL,
   CONTACT_BTN_TEXT,
+  MOTTO,
+  SKILLS,
 };

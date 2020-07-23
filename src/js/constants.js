@@ -34,7 +34,7 @@ const PROMO_SOCIAL = `
                       <img src="./src/assets/images/logo.png">
                       </a>`;
 const CONTACT_BTN_TEXT = 'Contact me';
-const MOTTO = 'I am inspired by creating great work with people who are as passionate as I am about building something awesome.';
+const MOTTO = 'I am happy to work with people who are as inspired as I am about creating something unique.';
 const SKILLS = `
                 <div class="skill">
                   <h3>Frontend Development</h3>
@@ -46,8 +46,9 @@ const SKILLS = `
                 </div>
                 <div class="skill">
                   <h3>Languages proficiency</h3>
-                  <p>English (Advanced, C2+), Chinese (HSK4, HSKK2)</p>
+                  <p>English (Advanced, C1), Chinese (HSK4, HSKK2)</p>
                 </div>`;
+const SKILLS_HEADER = 'Skills';
 
 export {
   NAME,
@@ -61,4 +62,5 @@ export {
   CONTACT_BTN_TEXT,
   MOTTO,
   SKILLS,
+  SKILLS_HEADER,
 };

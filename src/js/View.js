@@ -10,6 +10,7 @@ import {
   CONTACT_BTN_TEXT,
   MOTTO,
   SKILLS,
+  SKILLS_HEADER,
 } from './constants';
 
 class View {
@@ -117,15 +118,20 @@ class View {
     const skillsSection = document.createElement('section');
     const motto = document.createElement('div');
     const skillsWrapper = document.createElement('div');
+    const skillsHeader = document.createElement('h2');
 
     skillsSection.classList.add('skills');
     motto.classList.add('skills__motto');
     skillsWrapper.classList.add('skills__wrapper');
+    skillsHeader.classList.add('skills__header');
+    container.classList.add('container__skills');
 
     motto.innerHTML = MOTTO;
     skillsWrapper.innerHTML = SKILLS;
+    skillsHeader.innerHTML = SKILLS_HEADER;
 
     skillsSection.appendChild(container);
+    container.appendChild(skillsHeader);
     container.appendChild(motto);
     container.appendChild(skillsWrapper);
     this.body.appendChild(skillsSection);

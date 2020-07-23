@@ -26,6 +26,7 @@
 
     background: $text-color;
     border-radius: 20px;
+    transition: ease-out .3s all;
     cursor: pointer;
     &:hover {
         border-color: $text-color;

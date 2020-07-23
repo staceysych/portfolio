@@ -38,6 +38,7 @@ header {
   line-height: 1.66;
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
+  transition: ease-out .5s all;
   &:hover {
     color: $text-color;
 
